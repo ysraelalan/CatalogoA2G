@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A2G | Catálogo Digital</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+        <!-- SISTEMA TIPOGRÁFICO A2G -->
+        <!-- SISTEMA TIPOGRÁFICO A2G: IBM Plex Sans Devanagari + IBM Plex Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="brandIntro" class="brand-intro">
+    <img
+        class="brand-intro-logo"
+        src="assets/logo-a2g-blanco.svg"
+        alt="Logotipo de A2G Import"
+    >
+</div>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container nav">
+
+            <a href="#" class="logo" data-page="inicio" aria-label="A2G Import, inicio">
+                <img src="assets/logo-a2g-negro.svg" alt="A2G Import" class="header-logo">
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="#" data-page="inicio">Inicio</a>
+
+                <a href="#" data-page="productos">Productos</a>
+
+                <a href="#" data-page="marcas">Marcas</a>
+
+                <a href="#" data-page="novedades">Novedades</a>
+
+                <a href="#" data-page="contacto">Contacto</a>
+
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= APP ================= -->
+
+    <main id="app">
+
+
+        <!-- ================= INICIO ================= -->
+
+        <section class="page active" id="page-portada">
+            <div class="cover-screen">
+                <picture class="cover-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="assets/A2G-portada-movil.webp">
+                    <img src="assets/A2G-portada-escritorio.webp" alt="" class="portada" fetchpriority="high">
+                </picture>
+                <img class="cover-logo" src="assets/logo-a2g-blanco.svg" alt="A2G Import">
+                <div class="cover-content">
+                    <p class="cover-kicker">CATÁLOGO DIGITAL · BOLIVIA</p>
+                    <h1>Catálogo de<br>productos</h1>
+                    <p class="cover-edition">2026-III</p>
+                    <p class="cover-copy"><strong>EQUIPAMIENTO</strong><br>PARA <strong>FOTO · VIDEO · CREACIÓN</strong> DE<br><strong>CONTENIDO</strong></p>
+                    <button class="btn btn-primary cover-button" data-page="inicio" type="button">
+                        <span class="cover-button-label">Iniciar</span>
+                        <span class="cover-button-arrow" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="page" id="page-inicio">
+
+            <section class="hero">
+
+                <div class="container hero-content">
+
+                    <div class="hero-text">
+
+                        <span class="eyebrow">
+                            A2G IMPORT · CATÁLOGO DIGITAL 2026
+                        </span>
+
+                        <h1>
+                            Fotografía.<br>
+                            Video.<br>
+                            <span>Iluminación.</span>
+                        </h1>
+
+                        <p>
+                            Explora equipos para fotografía, video e iluminación. Encuentra herramientas para montar tu
+                            estudio, grabar contenido y llevar tus producciones más lejos.
+                        </p>
+
+                        <button class="btn btn-primary" data-page="productos">
+                            Explorar productos
+                        </button>
+
+                    </div>
+
+                    <div class="hero-visual hero-postcard-wrap">
+                        <div class="hero-postcard" aria-label="Fotografía de equipo de iluminación LED">
+                            <span class="postcard-label">A2G IMPORT · EQUIPAMIENTO</span>
+                            <img src="assets/led-528.jpg"
+                                alt="Panel de iluminación LED bicolor con batería y cargador">
+                            <div class="postcard-caption"><span>LUZ · IMAGEN · MOVIMIENTO</span><strong>Equipá tu
+                                    próxima idea.</strong></div>
+                        </div>
+                        <div class="hero-stamp"><strong>38 W</strong><span>LED BICOLOR</span></div>
+                        <div class="hero-orbit" aria-hidden="true"></div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- MARCAS DESTACADAS · CINTA HORIZONTAL INFINITA -->
+            <section class="brand-marquee" aria-label="Marcas con las que trabajamos">
+                <div class="container brand-marquee-heading">
+                    <span class="eyebrow">TRABAJAMOS CON</span>
+                    <p>Marcas reconocidas para tus producciones.</p>
+                </div>
+                <div class="brand-marquee-window">
+                    <div class="brand-marquee-track">
+<div class="brand-marquee-group">
+                            <span class="brand-logo-item brand-wordmark brand-amaran">Amaran</span>
+                            <span class="brand-logo-item brand-wordmark brand-aputure">Aputure</span>
+                            <span class="brand-logo-item brand-wordmark brand-boya">BOYA</span>
+                            <span class="brand-logo-item brand-wordmark brand-dji">DJI</span>
+                            <span class="brand-logo-item brand-wordmark brand-godox">Godox</span>
+                            <span class="brand-logo-item brand-wordmark brand-kf">K&F Concept</span>
+                            <span class="brand-logo-item brand-wordmark brand-neewer">Neewer</span>
+                            <span class="brand-logo-item brand-wordmark brand-smallrig">SmallRig</span>
+                            <span class="brand-logo-item brand-wordmark brand-synco">SYNCO</span>
+                            <span class="brand-logo-item brand-wordmark brand-telesin">Telesin</span>
+                            <span class="brand-logo-item brand-wordmark brand-ulanzi">Ulanzi</span>
+                        </div>
+<div class="brand-marquee-group" aria-hidden="true">
+                            <span class="brand-logo-item brand-wordmark brand-amaran" aria-hidden="true">Amaran</span>
+                            <span class="brand-logo-item brand-wordmark brand-aputure" aria-hidden="true">Aputure</span>
+                            <span class="brand-logo-item brand-wordmark brand-boya" aria-hidden="true">BOYA</span>
+                            <span class="brand-logo-item brand-wordmark brand-dji" aria-hidden="true">DJI</span>
+                            <span class="brand-logo-item brand-wordmark brand-godox" aria-hidden="true">Godox</span>
+                            <span class="brand-logo-item brand-wordmark brand-kf" aria-hidden="true">K&F Concept</span>
+                            <span class="brand-logo-item brand-wordmark brand-neewer" aria-hidden="true">Neewer</span>
+                            <span class="brand-logo-item brand-wordmark brand-smallrig" aria-hidden="true">SmallRig</span>
+                            <span class="brand-logo-item brand-wordmark brand-synco" aria-hidden="true">SYNCO</span>
+                            <span class="brand-logo-item brand-wordmark brand-telesin" aria-hidden="true">Telesin</span>
+                            <span class="brand-logo-item brand-wordmark brand-ulanzi" aria-hidden="true">Ulanzi</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CATEGORÍAS -->
+
+            <section class="section">
+
+                <div class="container">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <span class="eyebrow">CATÁLOGO</span>
+
+                            <h2>
+                                Explora por categoría
+                            </h2>
+                        </div>
+
+                        <button class="text-button" data-page="productos">
+                            Ver todo →
+                        </button>
+
+                    </div>
+
+
+                    <div class="category-grid" id="homeCategories">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- MARCAS -->
+
+            <section class="section section-light">
+
+                <div class="container">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <span class="eyebrow">MARCAS</span>
+
+                            <h2>
+                                Marcas del catálogo
+                            </h2>
+                        </div>
+
+                        <button class="text-button" data-page="marcas">
+                            Ver marcas →
+                        </button>
+
+                    </div>
+
+                    <div class="brand-strip" id="homeBrands"></div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- ================= PRODUCTOS ================= -->
+
+        <section class="page" id="page-productos">
+
+            <div class="container page-header">
+
+                <span class="eyebrow">
+                    CATÁLOGO
+                </span>
+
+                <h1>
+                    Productos
+                </h1>
+
+                <p>
+                    Encuentra productos por categoría, marca o palabra clave.
+                </p>
+
+            </div>
+
+
+            <div class="container catalog-category-wrap">
+                <div class="catalog-category-heading">
+                    <span class="eyebrow">EXPLORAR</span>
+                    <h2>Encuentra por categoría</h2>
+                </div>
+                <div class="catalog-category-list" id="catalogCategories"></div>
+            </div>
+
+            <div class="container catalog-layout">
+
+                <button class="filters-toggle" id="filtersToggle" type="button" aria-expanded="false" aria-controls="filtersPanel">
+                    <span aria-hidden="true">☷</span> Filtrar productos <span class="filters-toggle-arrow" aria-hidden="true">⌄</span>
+                </button>
+
+                <!-- FILTROS -->
+
+                <aside class="filters" id="filtersPanel">
+
+                    <div class="filter-header">
+
+                        <strong>
+                            Filtrar
+                        </strong>
+
+                        <button id="clearFilters">
+                            Limpiar
+                        </button>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label>
+                            Buscar
+                        </label>
+
+                        <input type="search" id="searchInput" placeholder="Producto, código...">
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label>
+                            Marca
+                        </label>
+
+                        <div id="brandFilters"></div>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label>
+                            Categoría
+                        </label>
+
+                        <div id="categoryFilters"></div>
+
+                    </div>
+
+
+                </aside>
+
+
+                <!-- RESULTADOS -->
+
+                <section class="catalog-results">
+
+                    <div class="results-toolbar">
+
+                        <span id="resultsCount">
+                            0 productos
+                        </span>
+
+                        <select id="sortSelect">
+
+                            <option value="default">
+                                Ordenar
+                            </option>
+
+                            <option value="name">
+                                Nombre A–Z
+                            </option>
+
+                            <option value="price-low">
+                                Precio menor
+                            </option>
+
+                            <option value="price-high">
+                                Precio mayor
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="active-filters" id="activeFilters">
+                    </div>
+
+
+                    <div class="product-grid" id="productGrid">
+                    </div>
+
+                    <button
+                        id="backToCategories"
+                        class="back-to-categories"
+                        type="button"
+                        hidden>
+                        ← Ver las 8 categorías
+                    </button>
+
+
+                    <button class="load-more" id="loadMore">
+                        Mostrar más productos
+                    </button>
+
+                </section>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= MARCAS ================= -->
+
+        <section class="page" id="page-marcas">
+
+            <div class="container page-header">
+
+                <span class="eyebrow">FABRICANTES</span>
+                <h1>Nuestras marcas</h1>
+                <p>Explora los equipos disponibles por fabricante y accede a sus productos dentro del catálogo.</p>
+                <div class="page-stat-row">
+                    <span><strong id="brandCount">0</strong> marcas en catálogo</span>
+                    <span><strong id="brandProductCount">0</strong> productos de demostración</span>
+                </div>
+
+            </div>
+
+
+            <div class="container brand-grid" id="brandPage">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= NOVEDADES ================= -->
+
+        <section class="page" id="page-novedades">
+
+            <div class="container page-header">
+                <span class="eyebrow">SELECCIÓN A2G</span>
+                <h1>Novedades y destacados</h1>
+                <p>Una selección inicial de productos destacados. La selección final se actualizará con el catálogo
+                    definitivo.</p>
+            </div>
+
+
+            <div class="container news-intro">
+                <div class="news-note"><span class="news-note-mark">A2G</span>
+                    <div><strong>Equipamiento para crear</strong>
+                        <p>Iluminación, accesorios y herramientas para fotografía y producción audiovisual.</p>
+                    </div><button class="text-button" data-page="productos">Explorar catálogo →</button>
+                </div>
+            </div>
+            <div class="container product-grid news-grid" id="newProducts"></div>
+
+        </section>
+
+
+
+        <!-- ================= PRODUCTO ================= -->
+
+        <section class="page" id="page-producto">
+
+            <div class="container product-detail" id="productDetail">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= CONTACTO ================= -->
+
+        <section class="page" id="page-contacto">
+
+            <div class="container page-header">
+
+                <span class="eyebrow">
+                    CONTACTO
+                </span>
+
+                <h1>
+                    Contacto
+                </h1>
+
+                <p>
+                    Consulta disponibilidad, precios y productos.
+                </p>
+
+            </div>
+
+
+            <div class="container contact-intro">
+                <div>
+                    <span class="eyebrow">ATENCIÓN A CLIENTES</span>
+                    <h2>¿Buscas un equipo específico?</h2>
+                    <p>Consulta disponibilidad, precio y compatibilidad. Selecciona el canal de atención que corresponda
+                        cuando se incorporen los datos oficiales de A2G.</p>
+                    <div id="contactProductContext" class="contact-product-context" hidden></div>
+                </div>
+                <div class="contact-mark">A2G<span>IMPORT</span></div>
+            </div>
+
+            <div class="container contact-grid">
+                <article class="contact-card">
+                    <span class="contact-number">01 / UBICACIÓN</span>
+                    <div class="contact-icon">⌖</div>
+                    <h3>La Paz</h3>
+                    <p>Atención y consultas en La Paz.</p>
+                    <span class="contact-status">Canal por configurar</span>
+                </article>
+                <article class="contact-card">
+                    <span class="contact-number">02 / UBICACIÓN</span>
+                    <div class="contact-icon">⌖</div>
+                    <h3>Santa Cruz</h3>
+                    <p>Atención y consultas en Santa Cruz.</p>
+                    <span class="contact-status">Canal por configurar</span>
+                </article>
+                <article class="contact-card">
+                    <span class="contact-number">03 / MENSAJERÍA</span>
+                    <div class="contact-icon">↗</div>
+                    <h3>WhatsApp</h3>
+                    <p>Consulta sobre disponibilidad y detalles de un producto.</p>
+                    <span class="contact-status">Enlace oficial pendiente</span>
+                </article>
+                <article class="contact-card">
+                    <span class="contact-number">04 / COMUNIDAD</span>
+                    <div class="contact-icon">◎</div>
+                    <h3>Redes sociales</h3>
+                    <p>Novedades, productos y comunicación de la marca.</p>
+                    <span class="contact-status">Enlaces oficiales pendientes</span>
+                </article>
+            </div>
+
+            <div class="container contact-bottom">
+                <div><span class="eyebrow">SIGUIENTE PASO</span>
+                    <h2>Encuentra tu próximo equipo.</h2>
+                </div>
+                <button class="btn btn-primary" data-page="productos">Volver al catálogo <span
+                        aria-hidden="true">↗</span></button>
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <strong>A2G</strong>
+
+                <p>
+                    Fotografía · Video · Iluminación
+                </p>
+
+            </div>
+
+            <nav class="footer-links" aria-label="Navegación del pie">
+                <a href="#" data-page="inicio">Inicio</a>
+                <a href="#" data-page="productos">Productos</a>
+                <a href="#" data-page="marcas">Marcas</a>
+                <a href="#" data-page="contacto">Contacto</a>
+            </nav>
+            <div>© 2026 A2G Import</div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="./app.js" defer></script>
+
+</body>
+
+</html>
