@@ -10,17 +10,22 @@
 
     <link rel="stylesheet" href="styles.css">
 
+        <!-- SISTEMA TIPOGRÁFICO A2G -->
+        <!-- SISTEMA TIPOGRÁFICO A2G: IBM Plex Sans Devanagari + IBM Plex Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- INTRODUCCIÓN DE MARCA: logotipo blanco sobre negro -->
-    <div class="brand-intro" id="brandIntro" aria-label="A2G Import" role="presentation">
-        <img src="assets/logo-a2g-blanco.svg" alt="" class="brand-intro-logo">
-    </div>
+    <div id="brandIntro" class="brand-intro">
+    <img
+        class="brand-intro-logo"
+        src="assets/logo-a2g-blanco.svg"
+        alt="Logotipo de A2G Import"
+    >
+</div>
 
     <!-- ================= HEADER ================= -->
 
@@ -32,7 +37,7 @@
                 <img src="assets/logo-a2g-negro.svg" alt="A2G Import" class="header-logo">
             </a>
 
-            <nav class="main-nav">
+            <nav class="main-nav" id="mainNavigation">
 
                 <a href="#" data-page="inicio">Inicio</a>
 
@@ -46,7 +51,7 @@
 
             </nav>
 
-            <button class="menu-toggle" id="menuToggle">
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNavigation">
                 ☰
             </button>
 
@@ -488,12 +493,16 @@
                     <p>Atención y consultas en Santa Cruz.</p>
                     <span class="contact-status">Canal por configurar</span>
                 </article>
-                <article class="contact-card">
+                <article class="contact-card contact-whatsapp">
                     <span class="contact-number">03 / MENSAJERÍA</span>
                     <div class="contact-icon">↗</div>
                     <h3>WhatsApp</h3>
-                    <p>Consulta sobre disponibilidad y detalles de un producto.</p>
-                    <span class="contact-status">Enlace oficial pendiente</span>
+                    <p>Contacta con nuestro equipo para consultar disponibilidad, precios y detalles de los productos.</p>
+                    <div class="whatsapp-numbers">
+                        <a href="https://wa.me/591XXXXXXXX" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Santa Cruz">+591 XXXXXXXX <span>Santa Cruz · WhatsApp ↗</span></a>
+                        <a href="https://wa.me/591YYYYYYYY" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp La Paz">+591 YYYYYYYY <span>La Paz · WhatsApp ↗</span></a>
+                    </div>
+                    <span class="contact-status">Reemplazar con los números oficiales</span>
                 </article>
                 <article class="contact-card">
                     <span class="contact-number">04 / COMUNIDAD</span>

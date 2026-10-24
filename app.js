@@ -1586,9 +1586,13 @@ function showProduct(id) {
         <article class="product-showcase">
             <div class="showcase-media">${mainImage}<span class="media-index">A2G / ${product.id}</span></div>
             <div class="showcase-title">
-                <span>${product.marca} · ${product.subcategoria}</span>
-                <h1>${product.nombre}</h1>
-                <p>${product.descripcion}</p>
+                <div class="detail-price-band" aria-label="Precio del producto">
+                    <div class="detail-price-copy"><span class="detail-band-label">Precio</span><strong class="detail-band-value">Bs. ${product.precio.toLocaleString("es-BO")}</strong></div>
+                    <button class="btn-dark detail-consult-button" type="button" data-page="contacto">Consultar producto <span aria-hidden="true">↗</span></button>
+                </div>
+                <div class="detail-brand"><span class="detail-band-label">Marca</span><span class="detail-band-value">${product.marca || "Sin especificar"}</span></div>
+                <div class="detail-model-band"><span class="detail-band-label">Modelo</span><h1>${product.nombre || "Modelo no especificado"}</h1></div>
+                <div class="detail-description-band"><span class="detail-band-label">Descripción</span><p>${product.descripcion}</p></div>
             </div>
             <div class="detail-metrics">
                 <div class="metric metric-primary"><span>Potencia / dato principal</span><strong>${product.potencia || "Consultar ficha"}</strong></div>
@@ -1608,11 +1612,6 @@ function showProduct(id) {
                     ${useItems.map(([title, copy]) => `<article class="use-item"><span class="use-symbol" aria-hidden="true">${title.includes("FOTO") ? "◎" : title.includes("VIDEO") ? "▷" : title.includes("ESTUDIO") ? "▦" : "＋"}</span><div><strong>${title}</strong><p>${copy}</p></div></article>`).join("")}
                 </div>
             </section>
-            <div class="detail-pricebar">
-                <div><span>MODELO ${product.nombre}</span><strong>Precio: Bs. ${product.precio.toLocaleString("es-BO")}</strong></div>
-                <button class="btn btn-dark" type="button" data-page="contacto">Consultar producto ↗</button>
-            </div>
-            <p class="detail-price-note">Precio de referencia transcrito del catálogo proporcionado. Confirma disponibilidad y precio vigente con A2G Import.</p>
         </article>
         <section class="related-section">
             <div class="section-heading"><div><span class="eyebrow">SEGUIR EXPLORANDO</span><h2>Productos relacionados</h2></div><button class="text-button" data-page="productos">Ver catálogo →</button></div>
@@ -1843,33 +1842,20 @@ renderNews();
 renderHomeBrands();
 
 /* =====================================================
-   A2G · CONTROL CINEMÁTICO INTEGRAL
+   INTRODUCCIÓN A2G · SALIDA SUAVE HACIA LA PORTADA
 ===================================================== */
-
-/* =========================================
-   INTRODUCCIÓN A2G
-========================================= */
-
 (() => {
     const intro = document.getElementById("brandIntro");
+    if (!intro) return;
 
-    // Si no existe la introducción, mostrar la portada.
-    if (!intro) {
-        document.body.classList.add("intro-finished");
-        return;
-    }
-
-    // Tiempo durante el que se muestra el logotipo.
-    const displayDuration = 2500;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Mantiene el logo visible brevemente y luego lo reduce hacia su posición en la portada.
+    const displayDuration = reducedMotion ? 250 : 1250;
+    const transitionDuration = reducedMotion ? 50 : 1500;
 
     window.setTimeout(() => {
-        // Iniciar la aparición de la portada.
         document.body.classList.add("intro-finished");
-
-        // Iniciar la salida de la cortina.
         intro.classList.add("is-leaving");
+        window.setTimeout(() => intro.remove(), transitionDuration);
     }, displayDuration);
 })();
-
-
-
